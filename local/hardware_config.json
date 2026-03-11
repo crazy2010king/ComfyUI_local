@@ -1,0 +1,34 @@
+{
+  "system": {
+    "os": "Linux",
+    "os_version": "#149~20.04.1-Ubuntu SMP Wed Apr 16 08:29:56 UTC 2025",
+    "platform": "Linux-5.15.0-139-generic-x86_64-with-glibc2.35",
+    "python_version": "3.10.12"
+  },
+  "cpu": {
+    "name": "Intel(R) Core(TM) i7-14700K",
+    "physical_cores": 20,
+    "logical_cores": 28,
+    "max_frequency_ghz": 5.0
+  },
+  "memory": {
+    "total_gb": 62.54,
+    "available_gb": 32.67,
+    "used_percent": 47.8
+  },
+  "gpu": {
+    "available": true,
+    "count": 1,
+    "devices": [
+      {
+        "id": 0,
+        "name": "NVIDIA GeForce RTX 4070 SUPER",
+        "total_memory_gb": 11.62,
+        "compute_capability": "8.9"
+      }
+    ],
+    "cuda_version": "12.8"
+  },
+  "detection_time": "2026-03-11T13:40:04+08:00",
+  "compatibility_level": "medium"
+}

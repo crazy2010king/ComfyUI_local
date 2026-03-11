@@ -1,0 +1,78 @@
+{
+  "models": {
+    "sd1.5": {
+      "v1-5-pruned-emaonly.safetensors": {
+        "description": "SD 1.5 基础模型",
+        "type": "checkpoint",
+        "download_url": "https://huggingface.co/runwayml/stable-diffusion-v1-5/resolve/main/v1-5-pruned-emaonly.safetensors",
+        "size_gb": 4.27,
+        "required": true
+      },
+      "vae-ft-mse-840000-ema-pruned.safetensors": {
+        "description": "SD 1.5 VAE 优化版",
+        "type": "vae",
+        "download_url": "https://huggingface.co/stabilityai/sd-vae-ft-mse-original/resolve/main/vae-ft-mse-840000-ema-pruned.safetensors",
+        "size_gb": 0.33,
+        "required": false
+      }
+    },
+    "sdxl": {
+      "sd_xl_base_1.0.safetensors": {
+        "description": "SDXL 1.0 基础模型",
+        "type": "checkpoint",
+        "download_url": "https://huggingface.co/stabilityai/stable-diffusion-xl-base-1.0/resolve/main/sd_xl_base_1.0.safetensors",
+        "size_gb": 6.94,
+        "required": true
+      },
+      "sd_xl_refiner_1.0.safetensors": {
+        "description": "SDXL 1.0 细化模型",
+        "type": "checkpoint",
+        "download_url": "https://huggingface.co/stabilityai/stable-diffusion-xl-refiner-1.0/resolve/main/sd_xl_refiner_1.0.safetensors",
+        "size_gb": 6.08,
+        "required": false
+      },
+      "sdxl_vae.safetensors": {
+        "description": "SDXL VAE",
+        "type": "vae",
+        "download_url": "https://huggingface.co/stabilityai/sdxl-vae/resolve/main/sdxl_vae.safetensors",
+        "size_gb": 0.33,
+        "required": false
+      }
+    },
+    "flux": {
+      "flux1-schnell.safetensors": {
+        "description": "FLUX Schnell 快速模型",
+        "type": "checkpoint",
+        "download_url": "https://huggingface.co/black-forest-labs/FLUX.1-schnell/resolve/main/flux1-schnell.safetensors",
+        "size_gb": 22.6,
+        "required": true
+      },
+      "ae.safetensors": {
+        "description": "FLUX VAE",
+        "type": "vae",
+        "download_url": "https://huggingface.co/black-forest-labs/FLUX.1-schnell/resolve/main/ae.safetensors",
+        "size_gb": 0.33,
+        "required": true
+      },
+      "clip_l.safetensors": {
+        "description": "CLIP-L 文本编码器",
+        "type": "clip",
+        "download_url": "https://huggingface.co/comfyanonymous/flux_text_encoders/resolve/main/clip_l.safetensors",
+        "size_gb": 1.36,
+        "required": true
+      },
+      "t5xxl_fp8_e4m3fn.safetensors": {
+        "description": "T5-v1.1-XXL FP8 文本编码器",
+        "type": "clip",
+        "download_url": "https://huggingface.co/Comfy-Org/t5-v1_1-xxl_gguf/resolve/main/t5-v1_1-xxl.Q8_0.gguf",
+        "size_gb": 17.4,
+        "required": true
+      }
+    }
+  },
+  "example_dependencies": {
+    "sd1.5_text_to_image": ["sd1.5/v1-5-pruned-emaonly.safetensors"],
+    "sdxl_text_to_image": ["sdxl/sd_xl_base_1.0.safetensors"],
+    "flux_text_to_image": ["flux/flux1-schnell.safetensors", "flux/ae.safetensors", "flux/clip_l.safetensors", "flux/t5xxl_fp8_e4m3fn.safetensors"]
+  }
+}

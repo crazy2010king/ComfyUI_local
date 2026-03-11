@@ -1,0 +1,91 @@
+{
+  "requirements": {
+    "sd1.5_basic": {
+      "name": "SD 1.5 基础示例",
+      "minimum": {
+        "vram_gb": 4,
+        "ram_gb": 8,
+        "cuda_required": true
+      },
+      "recommended": {
+        "vram_gb": 6,
+        "ram_gb": 16
+      },
+      "optimization_tips": [
+        "使用--medvram-sdxl参数可在4GB显存运行",
+        "启用FP8精度可进一步降低显存占用"
+      ]
+    },
+    "sdxl_basic": {
+      "name": "SDXL 基础示例",
+      "minimum": {
+        "vram_gb": 8,
+        "ram_gb": 16,
+        "cuda_required": true
+      },
+      "recommended": {
+        "vram_gb": 12,
+        "ram_gb": 32
+      },
+      "optimization_tips": [
+        "RTX 4070 SUPER可原生运行无需额外优化",
+        "启用注意力切片可在8GB显存运行",
+        "使用FP8量化可降低30%显存占用"
+      ]
+    },
+    "flux_basic": {
+      "name": "FLUX 基础示例",
+      "minimum": {
+        "vram_gb": 12,
+        "ram_gb": 32,
+        "cuda_required": true
+      },
+      "recommended": {
+        "vram_gb": 16,
+        "ram_gb": 64
+      },
+      "optimization_tips": [
+        "RTX 4070 SUPER 12GB可通过FP8量化流畅运行",
+        "启用--bf16-vae参数提升生成质量",
+        "使用注意力切片可在10GB显存运行"
+      ]
+    },
+    "video_basic": {
+      "name": "视频生成示例",
+      "minimum": {
+        "vram_gb": 10,
+        "ram_gb": 32,
+        "cuda_required": true
+      },
+      "recommended": {
+        "vram_gb": 16,
+        "ram_gb": 64
+      },
+      "optimization_tips": [
+        "降低视频分辨率至768x512可适配12GB显存",
+        "使用逐帧渲染模式降低显存占用"
+      ]
+    },
+    "multimodal_basic": {
+      "name": "多模态示例",
+      "minimum": {
+        "vram_gb": 8,
+        "ram_gb": 32,
+        "cuda_required": true
+      },
+      "recommended": {
+        "vram_gb": 12,
+        "ram_gb": 64
+      },
+      "optimization_tips": [
+        "模型使用4bit量化可在8GB显存运行",
+        "RTX 4070 SUPER可同时加载多个多模态模型"
+      ]
+    }
+  },
+  "compatibility_matrix": {
+    "high": ["sd1.5_basic", "sdxl_basic", "flux_basic", "video_basic", "multimodal_basic"],
+    "medium": ["sd1.5_basic", "sdxl_basic", "flux_basic", "multimodal_basic"],
+    "low": ["sd1.5_basic"]
+  }
+}
